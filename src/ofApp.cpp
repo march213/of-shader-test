@@ -21,14 +21,15 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     shader.begin();
+    shader.setUniform4f("fragColor", color);
     triangle.draw();
     shader.end();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    glm::vec3 curPos = triangle.getVertex(2);
-    triangle.setVertex(2, curPos - glm::vec3(0, 0.01, 0));
+    color[0] += 0.05;
+    color[1] -= 0.05;
 }
 
 //--------------------------------------------------------------

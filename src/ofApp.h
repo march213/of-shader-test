@@ -24,5 +24,6 @@ class ofApp : public ofBaseApp{
     
         ofMesh triangle;
         ofShader shader;
+        glm::vec4 color = glm::vec4(0, 1, 1, 1);
 
 };
